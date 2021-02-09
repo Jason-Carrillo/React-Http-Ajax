@@ -5,5 +5,9 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import axios from "axios";
 
+axios.interceptors.request.use(request => {
+    console.log(request)
+});
+
 ReactDOM.render( <App />, document.getElementById( 'root' ) );
 registerServiceWorker();
