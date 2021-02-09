@@ -7,6 +7,8 @@ import axios from "axios";
 
 axios.interceptors.request.use(request => {
     console.log(request)
+        //EDIT the 'Request' before returning
+    return request;
 });
 
 ReactDOM.render( <App />, document.getElementById( 'root' ) );
