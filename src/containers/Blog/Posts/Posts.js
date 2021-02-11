@@ -1,6 +1,9 @@
 import React, {Component} from 'react'
 import Post from "../../../components/Post/Post";
-import axios from "axios";
+import axios from "../../../axios";
+
+import Post from '../../../components/Post/Post'
+import './Posts.module.css'
 
 class Posts extends Component {
     state = {
@@ -49,9 +52,11 @@ class Posts extends Component {
 
        return(
            <section className="Posts">
-            {posts}
-        </section>
+             {posts}
+           </section>
        )
     }
 
 }
+
+export default Posts;
