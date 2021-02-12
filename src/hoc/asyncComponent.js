@@ -14,12 +14,12 @@ const asyncComponent = (importComponent) => {
         }
 
         render() {
-            return (
-                <div>
+            const C = this.state.component;
 
-                </div>
-            );
+            return C ? <C {...this.props} /> : null
         }
 
     }
 }
+
+export default asyncComponent;
