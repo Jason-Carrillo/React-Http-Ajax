@@ -46,6 +46,7 @@ class Blog extends Component {
                 {/*Displaying components can be passed through this for specific pages*/}
                 <Route path="/" exact component={Posts} />
                 <Route path="/new-post" component={NewPost} />
+                <Route path="/:id" exact component={Posts} />
 
             </div>
         );
