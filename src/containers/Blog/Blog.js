@@ -7,9 +7,7 @@ import NewPost from "./NewPost/NewPost";
 
 class Blog extends Component {
     state = {
-        posts: [],
-        selectedPostId: null,
-        error: false
+        auth: false
     }
 
 
@@ -42,7 +40,7 @@ class Blog extends Component {
 
                 {/*Displaying components can be passed through this for specific pages*/}
                 <Switch >
-                    <Route path="/new-post" component={NewPost} />
+                    {this.state.auth ? <Route path="/new-post" component={NewPost} /> : null }
                     <Route path="/posts" component={Posts} />
                     <Redirect from="/" to="/posts" />
                 </Switch>
