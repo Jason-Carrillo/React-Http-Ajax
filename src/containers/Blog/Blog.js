@@ -32,7 +32,7 @@ class Blog extends Component {
                                     textDecoration: 'underlined'
                                 }} >Home</NavLink> </li>
                             <li> <NavLink to={{
-                                pathname: this.props.match.uri +'/new-post',
+                                pathname: '/new-post',
                                 hash: '#submit',
                                 search: '?quick-submit=true'
                             }}>New Post</NavLink> </li>
@@ -47,7 +47,7 @@ class Blog extends Component {
                 {/*Displaying components can be passed through this for specific pages*/}
                 <Route path="/" exact component={Posts} />
                 <Route path="/new-post" component={NewPost} />
-                <Route path="/:id" exact component={Posts} />
+                <Route path="/:id" exact component={FullPost} />
 
             </div>
         );
