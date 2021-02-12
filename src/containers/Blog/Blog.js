@@ -22,7 +22,10 @@ class Blog extends Component {
                 <header>
                     <nav>
                         <ul>
-                            <li> <NavLink to="/" exact>Home</NavLink> </li>
+                            <li> <NavLink
+                                to="/"
+                                exact
+                                activeClassName="my-active">Home</NavLink> </li>
                             <li> <NavLink to={{
                                 pathname: this.props.match.uri +'/new-post',
                                 hash: '#submit',
