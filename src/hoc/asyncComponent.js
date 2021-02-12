@@ -6,7 +6,7 @@ const asyncComponent = (importComponent) => {
             component: null
         }
 
-        componentDidUpdate(prevProps, prevState, snapshot) {
+        componentDidMount(prevProps, prevState, snapshot) {
             importComponent()
                 .then(cmp => {
                     this.setState({component: cmp.default})
