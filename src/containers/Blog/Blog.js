@@ -14,9 +14,6 @@ class Blog extends Component {
 
 
     render () {
-
-
-
         return (
             <div className="Blog">
                 <header>
@@ -45,8 +42,8 @@ class Blog extends Component {
 
                 {/*Displaying components can be passed through this for specific pages*/}
                 <Switch >
-                    <Route path="/" exact component={Posts} />
                     <Route path="/new-post" component={NewPost} />
+                    <Route path="/" component={Posts} />
                 </Switch>
             </div>
         );
