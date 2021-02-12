@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import './NewPost.css';
 import axios from "axios";
+import { Redirect } from "react-router-dom";
 
 class NewPost extends Component {
     state = {
@@ -30,6 +31,7 @@ class NewPost extends Component {
     render () {
         return (
             <div className="NewPost">
+                <Redirect to="/posts" />
                 <h1>Add a Post</h1>
                 <label>Title</label>
                 <input type="text" value={this.state.title} onChange={(event) => this.setState({title: event.target.value})} />
